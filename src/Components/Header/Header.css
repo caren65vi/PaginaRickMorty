@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("../../assets/fondo.jpg") center/cover no-repeat;
+  color: #ffffff;
+}
+
+.header__content {
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+}
+
+.header__content h1 {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.rime-row {
+  color: #e7fbff;
+  letter-spacing: 0.12em;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.9),
+    0 0 16px rgba(120, 243, 255, 0.35),
+    0 8px 18px rgba(0, 0, 0, 0.16);
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(181, 255, 255, 0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header__content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  opacity: 0.92;
+}
+
+button,
+.header__cta {
+  background-color: #5DCAA5;
+  color: #1f1f1f;
+  border: none;
+  padding: 0.95rem 1.9rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header__cta {
+  display: inline-block;
+  text-decoration: none;
+}
+
+button:hover,
+.header__cta:hover {
+  transform: translateY(-2px);
+  background-color: #63b792;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}

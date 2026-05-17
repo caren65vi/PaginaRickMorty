@@ -1,0 +1,126 @@
+/* Mobile first: 1 columna */
+:root {
+  --seasons-bg-card: #2c2c2a;
+  --seasons-border: #0b3d2e;
+  --seasons-text: #f1efe8;
+  --seasons-meta: #b8c4c0;
+}
+
+.seasonsSection {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+  box-sizing: border-box;
+}
+
+.seasonsTitle {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-align: left;
+}
+
+.seasonsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  box-sizing: border-box;
+}
+
+.seasonCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--seasons-border);
+  background: var(--seasons-bg-card);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.seasonCard:hover {
+  transform: translateY(-3px);
+  border-color: #1d9e75;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.seasonCard:focus-visible {
+  outline: 2px solid #5dcaa5;
+  outline-offset: 2px;
+}
+
+.seasonCardMedia {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: #1a1a1c;
+}
+
+.seasonCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.seasonCardPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #2a2a2d 0%, #1c1c1e 100%);
+}
+
+.seasonCardOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0.85rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    transparent 100%
+  );
+}
+
+.seasonCardFooter {
+  padding: 0.65rem 0.85rem 0.85rem;
+  border-top: 1px solid var(--seasons-border);
+}
+
+.seasonCardMeta {
+  font-size: 0.8rem;
+  color: var(--seasons-meta);
+  line-height: 1.4;
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 640px) {
+  .seasonsSection {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .seasonsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.35rem;
+  }
+}
+
+/* Escritorio: 4 columnas y miniatura más ancha (más rectangular) */
+@media (min-width: 1024px) {
+  .seasonsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.15rem;
+  }
+
+  .seasonCardMedia {
+    aspect-ratio: 16 / 9;
+  }
+}

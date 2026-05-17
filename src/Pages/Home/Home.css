@@ -1,0 +1,33 @@
+.home-page {
+  width: 100%;
+  min-height: calc(100vh - 180px);
+  background-color: #1c1c1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.home-sectionDivider {
+  border: none;
+  height: 2px;
+  width: min(88%, 920px);
+  margin: 2rem auto;
+  flex-shrink: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(29, 158, 117, 0.35) 18%,
+    #5dcaa5 50%,
+    rgba(29, 158, 117, 0.35) 82%,
+    transparent 100%
+  );
+  border-radius: 1px;
+}
+
+@media (max-width: 640px) {
+  .home-sectionDivider {
+    width: min(92%, 100%);
+    margin: 1.5rem auto;
+  }
+}

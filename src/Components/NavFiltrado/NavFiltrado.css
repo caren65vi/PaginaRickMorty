@@ -1,0 +1,204 @@
+.nav {
+  --slime-active: #1d9e75;
+  --glow-mint: #5dcaa5;
+  --space-black: #1c1c1e;
+  --nav-surface: rgba(28, 28, 30, 0.97);
+  --nav-input-bg: #2c2c2e;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 100;
+  background: linear-gradient(180deg, var(--nav-surface) 0%, rgba(28, 28, 30, 0.92) 100%);
+  border-bottom: 1px solid rgba(93, 202, 165, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.navTop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navBrand {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+}
+
+.navShip {
+  width: 48px;
+  height: auto;
+  color: var(--glow-mint);
+  opacity: 0.95;
+}
+
+.navSearchForm {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  background: var(--nav-input-bg);
+  border-radius: 999px;
+  border: 1px solid rgba(93, 202, 165, 0.2);
+}
+
+.navSearchIcon {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.9rem;
+}
+
+.navSearchInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #f1efe8;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.navSearchInput::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.navSpecies {
+  padding: 10px 24px 14px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--slime-active) transparent;
+}
+
+.navSpeciesList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: min-content;
+}
+
+.navSpeciesLink {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(241, 239, 232, 0.75);
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.navSpeciesLink:hover {
+  color: var(--glow-mint);
+  background: rgba(29, 158, 117, 0.12);
+}
+
+.navSpeciesLinkActive {
+  background: #111827;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(93, 202, 165, 0.25);
+}
+
+.navSpeciesLinkActive:hover {
+  color: #ffffff;
+  background: #111827;
+}
+
+@media (max-width: 768px) {
+  .navTop {
+    padding: 10px 16px;
+    gap: 12px;
+  }
+
+  .navBrand {
+    width: 44px;
+  }
+
+  .navShip {
+    width: 40px;
+  }
+
+  .navSearchForm {
+    padding: 6px 12px;
+  }
+
+  .navSearchInput {
+    font-size: 0.85rem;
+  }
+
+  .navSpecies {
+    padding: 8px 16px 12px;
+  }
+
+  .navSpeciesList {
+    flex-wrap: nowrap;
+  }
+
+  .navSpeciesLink {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+
+  .navTop {
+    flex-direction: row;       
+    align-items: center;      
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .navBrand {
+    width: 36px;
+    flex-shrink: 0;
+    margin-left: 0;             
+  }
+
+  .navShip {
+    width: 34px;
+  }
+
+  .navSearchForm {
+    flex: 1;                   
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    padding: 6px 10px;
+
+  }
+
+  .navSpecies {
+    padding: 6px 12px 10px;
+  }
+
+  .navSpeciesList {
+    flex-wrap: wrap;           
+    gap: 6px;
+  }
+
+  .navSpeciesLink {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+}

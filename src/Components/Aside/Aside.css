@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.aside {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 2rem;
+  background-color: #5dcaa5;
+  color: #1f1f1f;
+}
+
+.asideSocial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.asideTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.asideList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.asideList a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.asideIcon {
+  font-size: 2rem;
+  color: #1f1f1f;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.asideIcon:hover {
+  color: #0b3d2e;
+  transform: translateY(-2px);
+}
+
+.asideQuoteRick {
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(31, 31, 31, 0.75);
+  letter-spacing: 0.01em;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .aside {
+    padding: 1rem;
+  }
+}
